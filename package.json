@@ -1,0 +1,33 @@
+{
+  "name": "recipe-app",
+  "version": "1.0.0",
+  "description": "app for recipe",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --open firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sameer0503/Recipe-app.git"
+  },
+  "author": "Sameer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sameer0503/Recipe-app/issues"
+  },
+  "homepage": "https://github.com/Sameer0503/Recipe-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}
