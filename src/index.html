@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe-app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    .hero{
+        height:25vh;
+    }
+</style>
 </head>
 <body>
-    <h1>hello...</h1>
+    <div class="container-fluid">
+        <div class="row hero">
+            <div class="col-md-12">
+                <h1 class="text-center">Fake Recipe app</h1>
+            </div>
+        </div>
+        <div class="row offset-md-2">
+            <div class="col-md-10 ">
+                <form class="search-form">
+                    <div class="input-group">
+                        <input type="text" id="recipe-name" name="recipe-name" class="form-control" placeholder="Search recipes">
+                        <button class="btn btn-primary" id="search-button" id="search-button">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
