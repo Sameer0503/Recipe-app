@@ -4,15 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe-app</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
     .hero{
-        height:25vh;
+        height:20vh;
+        align-content: center;
+    }
+    .recipe-img{
+        /* max-width: 5rem; */
+        max-height: 5rem;
+        min-width: 5rem;
+        min-height: 5rem;
+        object-fit: cover;
+    }
+    .img-container{
+        max-width: 5rem;
+        max-height: 5rem;
+        min-width: 5rem;
+        min-height: 5rem;
+        padding-left: 0.4rem;
+        padding-right: 0rem;
+    }
+    .loader-box{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loader{
+        height: 3rem;
+        /* size: 2em; */
+        animation: rotate 4s linear infinite;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
     }
 </style>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row hero">
             <div class="col-md-12">
                 <h1 class="text-center">Fake Recipe app</h1>
@@ -21,12 +57,30 @@
         <div class="row offset-md-2">
             <div class="col-md-10 ">
                 <form class="search-form">
-                    <div class="input-group">
+                    <div class="input-group form-group">
                         <input type="text" id="recipe-name" name="recipe-name" class="form-control" placeholder="Search recipes">
                         <button class="btn btn-primary" id="search-button" id="search-button">Search</button>
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-secondary">
+        <div class="row">
+            <div class="col-md-4 recipe-result-list bg-light">
+                <!-- <div class="loader-box">
+                    <img src="img/loader.png" alt="loading ..." class="loader">
+                </div> -->
+                <!-- <div class="row mt-2 py-2 border shadow justify-content-around">
+                    <div class="col-md-4 img-container ">
+                        <img src="http://forkify-api.herokuapp.com/images/avocadopizzawithcilantrosauce4bf5.jpg" class="img-fluid recipe-img rounded-circle" alt="">
+                    </div>
+                    <div class="col-md-8 text-center">
+                        <div><strong>Title of the recipe</strong></div>
+                        <div><em>publisher of the recipe</em></div>
+                    </div>
+                </div> -->
+            </div> 
         </div>
     </div>
 </body>
