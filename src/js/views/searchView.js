@@ -18,6 +18,16 @@ function renderRecipeList(recipe){
     return recipeCard;
 }
 
+/**
+ * @param {array} recipes 
+ * @param {number} pageNo 
+ * @param {number} limitPerPage 
+ */
+export const paginateRecipe = (recipes, pageNo = 1, limitPerPage = 10) => {
+    const start = (pageNo - 1) * limitPerPage;
+    const end = pageNo*limitPerPage;
+    return recipes.slice(start,end);
+}
 export function getRecipeCard(recipes){
     recipes.forEach((recipe) => {
         elements.recipeResultList.insertAdjacentHTML('afterbegin', renderRecipeList(recipe));
